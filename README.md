@@ -9,7 +9,7 @@ This bash script will convert all the files with heic extension in that same pat
 - To use this script:
 
 ```diff
-    + ./heic-converter.sh
+    ./heic-converter.sh
 ```
 
 -p \
