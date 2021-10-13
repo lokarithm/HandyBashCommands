@@ -13,4 +13,4 @@ This bash script will convert all the files with heic extension in that same pat
 ```
 
 -p \
-&nbsp;&nbsp;&nbsp;&nbsp;Convert heic files to png format. Not that this option is a bit slower than the jpg format.
+&nbsp;&nbsp;&nbsp;&nbsp;Convert heic files to png format. Note that this option is a bit slower than the jpg format.
