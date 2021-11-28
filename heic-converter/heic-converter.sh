@@ -18,7 +18,7 @@ else
     done
 
     #look for files in current path that contains ".heic" OR ".HEIC"
-    for file in $( ls | grep -E ".heic|.HEIC")
+    for file in $( find . -name "*.heic" -o -name "*.HEIC" -type f )
     do
         echo "Converting file: $file"
         sedCommand="s/heic/${fileExtension}/g;s/HEIC/${fileExtension}/g"
