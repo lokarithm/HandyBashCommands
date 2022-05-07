@@ -36,5 +36,6 @@ else
     end_time=$(date +%s.%3N)
 
     elapsed=$(echo "scale=3; $end_time - $start_time" | bc)
+    echo -e "\nElapsed time: \e[32m$elapsed \e[39mmilliseconds."
 
 fi
