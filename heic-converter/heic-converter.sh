@@ -17,14 +17,24 @@ else
         esac
     done
 
-    #look for files in current path that contains ".heic" OR ".HEIC"
-    for file in $( ls | grep -E ".heic|.HEIC")
+    start_time=$(date +%s.%3N)
+
+    # look for files in current path that contains ".heic" in a case-insensitive manner
+    for file in $( ls | grep -iF ".heic")
     do
         echo "Converting file: $file"
-        sedCommand="s/heic/${fileExtension}/g;s/HEIC/${fileExtension}/g"
+
+        # file extension of current file
+        currFileExtension=`echo $file | grep -iFo "heic"`
+        sedCommand="s/${currFileExtension}/${fileExtension}/g;s/HEIC/${fileExtension}/g"
+
         #replace original file name by changing the extension from heic to jpg
         outputFileName=`echo $file | sed -e $sedCommand`
         heif-convert $file $outputFileName
     done
+
+    end_time=$(date +%s.%3N)
+
+    elapsed=$(echo "scale=3; $end_time - $start_time" | bc)
 
 fi
