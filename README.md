@@ -6,11 +6,21 @@ Some handy bash files for Linux
 
 This bash script will convert all the files with heic extension in that same path to jpg format by default.
 
-- To use this script:
+- To use this script to convert to png:
 
 ```diff
-    ./heic-converter.sh
+    ./heic-converter.sh -p
 ```
 
--p \
-&nbsp;&nbsp;&nbsp;&nbsp;Convert heic files to png format. Note that this option is a bit slower than the jpg format.
+ 
+
+
+- To use this script to convert to jpg:
+
+```diff
+    ./heic-converter.sh 
+```
+
+ 
+ 
+ Note that the "-p" option is a bit slower than the jpg format.
